@@ -1,0 +1,29 @@
+@use'../custom.scss' as *;
+
+
+.display-6{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    &--intro{
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    &--description{
+        font-size: 1rem;
+        display: block;
+    }
+}
+
+//DISPLAY - 6
+.dispaly6{
+    font-family: 'Poppins', sans-serif;
+}
+
+//BORDER RIGHT
+
+.gradient{
+    background: linear-gradient(to right, rgba($primary, 5), rgba($secondary, 0.7));
+    background-color: cyan;
+}

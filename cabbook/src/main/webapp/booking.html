@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="booking.css">
+</head>
+
+<body >
+<h2 align="center"> BOOK YOUR CAB</h2>
+ <form class="reg-form" method="post" action= cust-book-servlet.html>
+   <p class="helper-text"></p>
+   <div class="field-row">
+      <label class="form-label" for="custoName">Customer name :</label>
+      <input type="text" id="custname" name="custname" class="field text-field first-name-field" required>
+      <span class="message"></span>
+   </div>
+   
+   <div class="field-row">
+      <label class="form-label cf" for="phonenumber">Phone Number :</label>
+      <input type="text" id="phonenumber" name="phonenumber" class="field text-field last-name-field" required>
+      <span class="message"></span>
+   </div>
+   <div class="field-row">
+      <label class="form-label" for="tripdate">Trip Date :</label>
+      <input type="date" id="tripdate" name="tripdate"class="field text-field initials-field">
+   </div>
+   <div class="field-row">
+      <label class="form-label" for="bookingdate">Booking Date :</label>
+      <input type="date" id="bookingdate" name="bookingdate" class="field date-field dob-field" min="1900-01-01" max="2030-09-18"  required>
+      <span class="message"></span>
+   </div>
+   <div class="field-row">
+      <label class="form-label" for="source">Source :</label>
+      <input type="text" id="source" name="source" class="field text-field tel-field" required>
+      <span class="message"></span>
+   </div>
+   <div class="field-row">
+      <label class="form-label" for="destination">Destination :</label>
+      <input type="text" id="destination" name="destination" class="field text-field hs-field" required>
+      <span class="message"></span>
+   </div>
+   <div class="field-row">
+      <label class="form-label" for="cabname">Cab Name :</label>
+      <input type="text" id="cabname" name="cabname" class="field text-field address-field" required>
+      <span class="message"></span></div>
+      
+       <div class="field-row">
+      <label class="form-label" for="vehiclecharge">Vehicle Charge :</label>
+      <input type="text" id="vehiclecharge" name="vehiclecharge" placeholder="50rs/hr" class="field text-field address-field" required>
+      <span class="message"></span></div>
+      
+   <div class="field-row">
+      <label class="form-label" for="noofpassengers">No of Passengers :</label>
+      <input type="text" id="noofpassengers" name="noofpassengers" class="field text-field address-field" required>
+      <span class="message"></span>   </div>
+     
+    <div class="field-row">
+      <label class="form-label" > Mode of Transaction</label>
+      <select class="field form-dropdown" name="modeoftransaction">
+         <option value="googlepay"> google Pay </option>
+         <option value="cashondelivery"> Cash on Delivery </option>
+   </select>
+   </div> 
+<div class="field-row">
+      <label class="form-label" for="pickuptime">Pickup Time :</label>
+      <input type="text" id="pickuptime" name="pickuptime" class="field text-field address-field" required>
+      <span class="message"></span>
+      </div> 
+      
+      <div class="field-row">
+      <label class="form-label" for="waitinghours">Waiting Hours :</label>
+      <input type="text" id="wiatinghours" name="waitinghours" class="field text-field address-field" required>
+      <span class="message"></span>   
+      </div>
+   <div class="field-row">
+      <label class="form-label" for="kilometer">Kilometers :</label>
+      <input type="text" id="kilometer" name="kilometer"class="field text-field email-field" required>
+      <span class="message"></span>
+   </div>
+   <div class="field-row">
+   <label class="form-label" for ="AMOUNT TO PAY"></label>
+   <input type="button" onClick="multiplyBy()" Value="AMOUNT TO PAY" />
+   </div>
+     <p><br>
+<span id = "result"></span>
+</p>   
+        
+  <p> <div class="field-row">
+      <label class="form-label"></label>
+      <button class="form-button">Book</button>&nbsp;&nbsp;&nbsp;&nbsp; <a href ="news.html"><button class="form-button">cancel</button></a>
+   </div>
+   <script type="text/javascript">
+   function multiplyBy()
+   {
+           num1 = document.getElementById("vehiclecharge").value;
+           num2 = document.getElementById("kilometer").value;
+           document.getElementById("result").innerHTML = num1 * num2;
+   }
+        </script>
+</form>
+
+</body>
+</html>
